@@ -31,12 +31,27 @@ See `API_DOCUMENTATION.md` for full details.
 | `GET`| `/chatrooms` | Get all chatrooms. | 200, 304 |
 | `GET` | `/messages?chatroom=NAME&num=NUM`| Get latest `NUM` messages for specified chatroom. | 200, 400, 404 |
 
-## Special Requirements
- - While you may hardcode chatroom names as an entity of your Wit.AI agent, you may *not* hardcode them in your JavaScript code.
- - *Each* intent within your Wit.AI agent should be trained on **5+ utterances** 
- - When submitting your project, please be sure to...
-   - **...leave your `CS571_WITAI_ACCESS_TOKEN` hardcoded.** The graders will need this for their testing.
-   - **...include a .ZIP of your Wit.AI agent!** Further instructions can be found underneath "Submission Details".
+
+## Fall 2025 Special Note
+
+As of October 22nd, [Wit.AI does not seem to be training any new agents](https://github.com/wit-ai/wit/issues/2806) with no end in sight. Therefore, a WitAI Access Token is given for you in `TextApp.jsx` with a pre-trained agent! You can activate the following intents by using the utterances below...
+
+`get_help`
+ - help
+ - get help
+ - what can I do
+
+`get_chatrooms`
+ - chatrooms
+ - what chatrooms are there
+ - what chatrooms can I use
+
+`get_messages`
+ - messages
+ - give me the 4 latest posts
+ - what are the 3 latest posts in Bascom Hill Hangout
+
+ The `badgerchat_witai.zip` is attached for your reference for specifics about the utterances, intents, and entities used.
 
 ## BadgerMart
 
@@ -62,10 +77,6 @@ Then, when this intent is triggered, the agent should respond with the latest X 
 
 Note that both X and Y are optional entities. If the number is omitted, you may assume that it is 1. If the chatroom is omitted, you may assume that it is the latest overall posts across all chatrooms. You do **not** need to handle cases where the number is less than 1, greater than 10, negative, or a floating point number. You **can assume** a user will always either (a) not type a number at all or (b) type in a number between 1 and 10.
 
-**Hint:** For this intent, you will likely need to create an entity within your Wit.AI agent. You may hardcode chatroom names within the Wit.AI agent, but you may not hardcode chatroom names within your React code.
-
-**Hint:** You may find it helpful to provide synonym(s) for each of your chatrooms, e.g. "Witte Whispers" may be referred to as "Witte", however, this is up to you!
-
 ![](_figures/step3.png)
 
 ### 4. Varied Responses
@@ -74,32 +85,8 @@ Go back to each of the previous intents and vary the way in which your agent res
 
 ![](_figures/step4.png)
 
-### 5. Tell Us What Works
-
-As you've probably seen by now, Wit.AI's language model *isn't* the latest and greatest :) So, to help our graders out, edit this `README.md` file with at least 3 ways to prompt each of your intents below that you've seen work. **Example text is given below, please replace these with what you've used and seen work.**
-
-If these are the utterances you used, you can leave them below.
-
-`get_help`
- - help
- - get help
- - what can I do
-
-`get_chatrooms`
- - chatrooms
- - what chatrooms are there
- - what chatrooms can I use
-
-`get_messages`
- - messages
- - give me the 4 latest posts
- - what are the 3 latest posts in Bascom Hill Hangout
-
 ### Submission Details
 
-There is no video demo for this assignment; simply...
- - Be sure to complete Step 5 above.
- - Leave your `CS571_WITAI_ACCESS_TOKEN` hardcoded.
- - **INCLUDE A COPY OF YOUR WIT.AI AGENT!** You can download this by visiting your `Wit.AI Project > Management > Settings > Export Your Data > Download .zip with your data`. Please commit and push this ZIP file as a part of your Git repository.
+There is no video demo for this assignment; simply leave your `CS571_WITAI_ACCESS_TOKEN` hardcoded. *This was given for you.*
 
 Then add, commit, and push your code!

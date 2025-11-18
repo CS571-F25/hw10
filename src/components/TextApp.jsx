@@ -5,7 +5,7 @@ import { BeatLoader } from 'react-spinners';
 import TextAppMessageList from './TextAppMessageList';
 import Constants from '../constants/Constants';
 
-const CS571_WITAI_ACCESS_TOKEN = ""; // Put your CLIENT access token here.
+const CS571_WITAI_ACCESS_TOKEN = "3SSI6VDE7FAYJMEJDBBLFGA3IQ4KHHFU"; // Put your CLIENT access token here.
 
 function TextApp() {
 
